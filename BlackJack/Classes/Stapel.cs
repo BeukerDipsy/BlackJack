@@ -1,4 +1,5 @@
 ﻿using BlackJack.Enums;
+using BlackJack.Classes;
 
 namespace BlackJack.Classes
 {
@@ -16,7 +17,7 @@ namespace BlackJack.Classes
         }
 
         //Maakt een nieuwe kaart aan (per symbool gaat hij kijken welke soort kaarten hij aan moet maken)
-        private void KrijgKaarten()
+        public void KrijgKaarten()
         {
             AlleKaarten = new List<Kaart>();
 
@@ -50,7 +51,6 @@ namespace BlackJack.Classes
         public Kaart PakVanStapel()
         {
             Kaart BovensteKaart = stapel[0];
-
             Symbool symbool = BovensteKaart.KaartSymbool;
             Waarde waarde = BovensteKaart.KaartWaarde;
 

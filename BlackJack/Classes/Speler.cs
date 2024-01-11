@@ -101,5 +101,19 @@ namespace BlackJack.Classes
             Console.WriteLine($"Je hebt momenteel { hoeveelkaarten} kaarten");
             return hoeveelkaarten;
         }
+
+        public int DisplayStats()
+        {
+            int Waarde = 0;
+            DisplayKaarten();
+            Waarde = KrijgWaarde();
+            DisplayWaarde(Waarde);
+            return Waarde;
+        }
+
+        public void ClearHand()
+        {
+            SpelerHand.Clear();
+        }
     }
 }
